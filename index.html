@@ -197,6 +197,7 @@ footer { border-top: 1px solid var(--border-light); background: rgba(5,10,18,0.9
     <li><a href="#platform">Platform</a></li>
     <li><a href="#modules">Modules</a></li>
     <li><a href="#why">Why Argus</a></li>
+    <li><a href="#leadership">Leadership</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#demo" class="nav-cta">Request Demo</a></li>
   </ul>
@@ -252,6 +253,38 @@ footer { border-top: 1px solid var(--border-light); background: rgba(5,10,18,0.9
       <div class="problem-right fade-in">
         <p class="problem-quote">"We built Argus because we lived these problems. Not as consultants — as the sergeant on the floor at 2am, trying to find a warrant nobody could locate."</p>
         <p class="problem-quote-source">— Doug Anderson, Founder &amp; CEO<br>Paladin Intelligence</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leadership">
+  <div class="section-inner">
+    <div class="section-label">Leadership</div>
+    <h2 class="section-title">Built by People<br>Who've Been There.</h2>
+    <p class="section-body">Paladin Intelligence was founded by corrections professionals who lived the operational problems Argus solves — not consultants, not software people. People who ran the floor.</p>
+    <div class="problem-grid fade-in" style="margin-top:60px">
+      <div class="problem-right" style="display:flex;flex-direction:column;gap:0">
+        <div style="padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--border-light)">
+          <p style="font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:12px">Founder &amp; CEO</p>
+          <p style="font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--silver-bright);margin-bottom:12px">Doug Anderson</p>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.7">Corrections leader, Watch Commander, and technology innovator. Founded Paladin Intelligence to solve the operational problems he lived every day on the floor. Every workflow in Argus was experienced firsthand before a single line of code was written.</p>
+        </div>
+        <div>
+          <p style="font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:12px">Co-Founder &amp; Chief Operations Advisor</p>
+          <p style="font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--silver-bright);margin-bottom:12px">Jeff Ashley</p>
+          <p style="font-size:14px;color:var(--text-muted);line-height:1.7">Corrections professional and law enforcement leader with more than two decades of experience in jail administration. Ashley has served at every level of a detention organization — from Jailor to Assistant Jail Administrator — providing a comprehensive understanding of detention operations few can match. Co-founder of Paladin Intelligence and recipient of the FBI-LEEDA Leadership Trilogy Award.</p>
+        </div>
+      </div>
+      <div class="problem-right">
+        <p class="problem-quote" style="font-size:18px">"Rather than replacing existing systems, Argus is designed to integrate them — reducing human error, improving situational awareness, and enabling detention leaders to make faster, more informed operational decisions."</p>
+        <p class="problem-quote-source">— Jeff Ashley, Co-Founder<br>Paladin Intelligence</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hidden-spacer" style="display:none">
       </div>
     </div>
   </div>
@@ -367,7 +400,7 @@ footer { border-top: 1px solid var(--border-light); background: rgba(5,10,18,0.9
         <div class="form-success" id="formSuccess">
           <div class="success-icon">&#10003;</div>
           <h3>Request Received</h3>
-          <p>We'll be in touch within one business day to schedule your demonstration.<br><br><span style="color:var(--gold)">demo@piargus.com</span></p>
+          <p>We'll be in touch within one business day to schedule your demonstration.<br><br><span style="color:var(--gold)"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3f5b5a52507f4f565e4d584a4c115c5052">[email&#160;protected]</a></span></p>
         </div>
       </div>
       <div class="demo-right">
@@ -401,7 +434,7 @@ footer { border-top: 1px solid var(--border-light); background: rgba(5,10,18,0.9
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function submitDemo() {
   var fname = document.getElementById('fname').value.trim();
   var lname = document.getElementById('lname').value.trim();
@@ -428,15 +461,4 @@ function submitDemo() {
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-  anchor.addEventListener('click', function(e) {
-    var target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
-</script>
-
-</body>
-</html>
+  anchor.addEventListener('cli
