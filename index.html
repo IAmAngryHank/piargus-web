@@ -3,414 +3,351 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Argus — Justice Operations Platform | Paladin Intelligence</title>
-<meta name="description" content="Nothing Hidden. Nothing Missed. Argus is the Justice Operations Platform built by law enforcement, for law enforcement.">
+<title>Argus - Justice Operations Platform | Paladin Intelligence</title>
+<meta name="description" content="Nothing Hidden. Nothing Missed. Argus is the Justice Operations Platform built by working jail professionals - every act attributed, every clock watched, driven end to end before it ships.">
+<meta property="og:title" content="Argus - Justice Operations Platform">
+<meta property="og:description" content="Nothing Hidden. Nothing Missed. Built by working jail professionals.">
+<meta property="og:image" content="https://piargus.com/brand/argus-shield-480.png">
+<meta property="og:url" content="https://piargus.com">
+<link rel="icon" href="brand/argus-shield-120.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy: #070d16;
-  --navy-mid: #0a1628;
-  --gold: #c9a84c;
-  --gold-light: #e8c96a;
-  --gold-dim: #7a5f28;
-  --silver: #a8b8cc;
-  --silver-bright: #d4e0ec;
-  --white: #f0f4f8;
-  --text-muted: #6a8aaa;
-  --border: rgba(201,168,76,0.2);
-  --border-light: rgba(201,168,76,0.08);
+:root{
+  --navy:#0C1A2E; --navy-deep:#070E1A; --navy-mid:#101F35;
+  --gold:#C9A24B; --gold-muted:#A8863A; --gold-dim:#5E4B22;
+  --silver:#C9CDD3; --cream:#F4F0E6; --muted:#7E8A9B;
+  --line:rgba(201,162,75,.22); --line-soft:rgba(201,162,75,.09);
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: var(--navy); color: var(--white); font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; }
-body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 0; opacity: 0.4; }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--navy-deep);color:var(--cream);font-family:Barlow,Arial,Helvetica,sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.wordmark{font-family:Cinzel,Georgia,serif;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.cond{font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif}
+.eyebrow{font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:600;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+.inner{max-width:1160px;margin:0 auto;padding:96px 40px}
+h2{font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:clamp(34px,4.6vw,52px);line-height:1;letter-spacing:.01em;color:var(--cream);margin:14px 0 18px}
+.lead{font-size:17px;color:var(--silver);max-width:60ch;line-height:1.7}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent)}
 
-/* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; background: rgba(7,13,22,0.92); border-bottom: 1px solid var(--border); backdrop-filter: blur(12px); }
-.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.nav-shield { width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(201,168,76,0.4)); }
-.nav-brand { display: flex; flex-direction: column; line-height: 1; }
-.nav-brand-main { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 3px; color: var(--white); }
-.nav-brand-sub { font-family: 'Rajdhani', sans-serif; font-size: 10px; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; }
-.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-.nav-links a { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1.5px; color: var(--silver); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
-.nav-links a:hover { color: var(--gold); }
-.nav-cta { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; color: var(--navy) !important; background: var(--gold); padding: 8px 22px; text-decoration: none; text-transform: uppercase; transition: background 0.2s, transform 0.1s; }
-.nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; transform: translateY(-1px); }
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(7,14,26,.92);border-bottom:1px solid var(--line-soft);backdrop-filter:blur(10px)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:38px;height:38px;object-fit:contain}
+.brand .cond{font-weight:700;font-size:22px;letter-spacing:.14em;color:var(--cream);line-height:1}
+.brand .wordmark{font-size:9px;color:var(--gold);letter-spacing:.24em;display:block;margin-top:3px}
+.links{display:flex;gap:30px;list-style:none;align-items:center}
+.links a{font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--silver);text-decoration:none}
+.links a:hover{color:var(--gold)}
+.btn{display:inline-block;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:13px 30px;border:1px solid var(--gold);transition:.2s}
+.btn.gold{background:var(--gold);color:var(--navy-deep)}
+.btn.gold:hover{background:#DDB65C}
+.btn.ghost{color:var(--silver);border-color:rgba(201,205,211,.3)}
+.btn.ghost:hover{color:var(--gold);border-color:var(--gold)}
+.links .btn{padding:8px 20px;font-size:13px}
 
-/* HERO */
-.hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 68px 48px 0; }
-.hero-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%); }
-.hero-glow { position: absolute; top: 20%; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%); pointer-events: none; }
-.hero-content { position: relative; z-index: 1; text-align: center; max-width: 900px; }
-.hero-eyebrow { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; gap: 16px; }
-.hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: block; width: 40px; height: 1px; background: var(--gold-dim); }
-.hero-shield-wrap { margin: 0 auto 32px; width: 160px; height: 160px; animation: float 4s ease-in-out infinite; }
-.hero-shield-wrap img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 40px rgba(201,168,76,0.5)); }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
-.hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 8vw, 96px); letter-spacing: 6px; line-height: 0.95; color: var(--white); margin-bottom: 8px; }
-.hero-title span { color: var(--gold); }
-.hero-tagline { font-family: 'Rajdhani', sans-serif; font-size: clamp(18px, 2.5vw, 26px); font-weight: 500; letter-spacing: 5px; color: var(--silver); text-transform: uppercase; margin-bottom: 32px; }
-.hero-sub { font-size: 16px; color: var(--text-muted); max-width: 560px; margin: 0 auto 48px; line-height: 1.7; }
-.hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-.btn-primary { font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; background: var(--gold); color: var(--navy); padding: 14px 36px; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
-.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.3); }
-.btn-secondary { font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; background: transparent; color: var(--silver); padding: 14px 36px; border: 1px solid rgba(168,184,204,0.3); cursor: pointer; transition: all 0.2s; display: inline-block; }
-.btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
-.hero-stats { display: flex; justify-content: center; gap: 60px; margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--border-light); }
-.stat-item { text-align: center; }
-.stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 42px; letter-spacing: 2px; color: var(--gold); line-height: 1; }
-.stat-label { font-family: 'Rajdhani', sans-serif; font-size: 11px; letter-spacing: 2px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px; }
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:100px 40px 60px;text-align:center;overflow:hidden;background:radial-gradient(ellipse 70% 55% at 50% 35%,#132743 0%,var(--navy-deep) 70%)}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,162,75,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(201,162,75,.05) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 60% 60% at 50% 45%,#000,transparent)}
+.hero-in{position:relative;max-width:880px}
+.hero img{width:150px;height:150px;object-fit:contain;margin:20px auto 26px;display:block;filter:drop-shadow(0 0 34px rgba(201,162,75,.35))}
+.hero h1{font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:clamp(54px,8vw,104px);line-height:.92;letter-spacing:.03em;color:var(--cream)}
+.hero h1 span{color:var(--gold)}
+.hero .built{margin-top:18px;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:500;font-size:clamp(16px,2.2vw,22px);letter-spacing:.3em;text-transform:uppercase;color:var(--silver)}
+.hero p.sub{margin:26px auto 40px;max-width:58ch;font-size:17px;color:var(--silver);line-height:1.7}
+.actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.truths{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:72px;border-top:1px solid var(--line-soft);padding-top:34px}
+.truth{padding:0 18px;border-left:1px solid var(--line-soft);text-align:left}
+.truth:first-child{border-left:0}
+.truth b{display:block;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:20px;letter-spacing:.04em;color:var(--gold);line-height:1.1}
+.truth span{display:block;margin-top:6px;font-size:13px;color:var(--muted);line-height:1.5}
 
-/* SECTIONS */
-section { position: relative; z-index: 1; }
-.section-inner { max-width: 1200px; margin: 0 auto; padding: 100px 48px; }
-.section-label { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
-.section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
-.section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 56px); letter-spacing: 3px; color: var(--white); margin-bottom: 20px; line-height: 1; }
-.section-body { font-size: 16px; color: var(--text-muted); max-width: 560px; line-height: 1.8; }
+/* problem */
+.band{background:var(--navy);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:start;margin-top:48px}
+.stack{display:flex;flex-direction:column;gap:12px}
+.item{padding:18px 20px;border:1px solid var(--line-soft);background:rgba(7,14,26,.6)}
+.item b{display:block;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:600;font-size:18px;letter-spacing:.03em;color:var(--cream);margin-bottom:4px}
+.item p{font-size:14px;color:var(--muted);line-height:1.55}
+.quote{padding:34px 36px;border:1px solid var(--line);background:rgba(201,162,75,.04);position:relative}
+.quote::before{content:'\201C';position:absolute;top:-14px;left:18px;font-family:Georgia,serif;font-size:150px;line-height:1;color:rgba(201,162,75,.08)}
+.quote p{position:relative;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:500;font-size:24px;line-height:1.4;color:var(--cream)}
+.quote small{display:block;margin-top:18px;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 
-/* PROBLEM */
-.problem-section { background: var(--navy-mid); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
-.problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 60px; }
-.problem-list { display: flex; flex-direction: column; gap: 16px; }
-.problem-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; border: 1px solid var(--border-light); background: rgba(7,13,22,0.6); transition: border-color 0.2s; }
-.problem-item:hover { border-color: var(--border); }
-.problem-icon { width: 36px; height: 36px; background: rgba(232,64,64,0.1); border: 1px solid rgba(232,64,64,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
-.problem-text strong { font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; color: var(--silver-bright); display: block; margin-bottom: 4px; }
-.problem-text p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
-.problem-right { padding: 40px; border: 1px solid var(--border); background: rgba(201,168,76,0.03); position: relative; }
-.problem-right::before { content: '"'; font-family: 'Bebas Neue', sans-serif; font-size: 180px; color: rgba(201,168,76,0.06); position: absolute; top: -20px; left: 20px; line-height: 1; }
-.problem-quote { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 500; color: var(--silver-bright); line-height: 1.5; margin-bottom: 24px; position: relative; z-index: 1; }
-.problem-quote-source { font-size: 12px; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; font-family: 'Rajdhani', sans-serif; }
+/* modules */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+.card{padding:24px 20px;border:1px solid var(--line-soft);background:rgba(16,31,53,.7);position:relative;transition:.2s}
+.card::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold);transform:scaleX(0);transition:.25s}
+.card:hover{border-color:var(--line);transform:translateY(-3px)}
+.card:hover::after{transform:scaleX(1)}
+.card b{display:block;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:17px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream);margin-bottom:8px}
+.card p{font-size:13px;color:var(--muted);line-height:1.55}
 
-/* MODULES */
-.modules-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 60px; }
-.module-card { border: 1px solid var(--border-light); background: rgba(10,22,40,0.8); padding: 24px 20px; text-align: center; transition: all 0.25s; position: relative; overflow: hidden; }
-.module-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transition: transform 0.25s; }
-.module-card:hover { border-color: var(--border); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.4); }
-.module-card:hover::after { transform: scaleX(1); }
-.module-name { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; color: var(--silver-bright); text-transform: uppercase; margin-bottom: 6px; }
-.module-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+/* why */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px;border:1px solid var(--line-soft)}
+.why{padding:34px 30px;background:rgba(7,14,26,.6)}
+.why:hover{background:rgba(16,31,53,.85)}
+.why .n{font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:44px;color:rgba(201,162,75,.18);line-height:1;margin-bottom:8px}
+.why b{display:block;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:20px;letter-spacing:.03em;color:var(--gold);margin-bottom:8px}
+.why p{font-size:14.5px;color:var(--silver);line-height:1.7}
 
-/* FEATURES */
-.features-section { background: var(--navy-mid); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
-.features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 60px; border: 1px solid var(--border-light); }
-.feature-item { padding: 36px 32px; background: rgba(7,13,22,0.6); border: 1px solid transparent; transition: all 0.2s; }
-.feature-item:hover { background: rgba(10,22,40,0.9); border-color: var(--border); }
-.feature-number { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: rgba(201,168,76,0.15); letter-spacing: 2px; line-height: 1; margin-bottom: 12px; }
-.feature-title { font-family: 'Rajdhani', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 1px; color: var(--gold); margin-bottom: 10px; }
-.feature-body { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+/* timeline */
+.tl{margin-top:44px;position:relative}
+.tl::before{content:'';position:absolute;left:26px;top:0;bottom:0;width:1px;background:linear-gradient(transparent,var(--gold-dim) 10%,var(--gold-dim) 90%,transparent)}
+.step{display:flex;gap:28px;padding:28px 0;border-bottom:1px solid var(--line-soft)}
+.step:last-child{border-bottom:0}
+.mark{width:52px;height:52px;flex:0 0 52px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);background:var(--navy);font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:20px;color:var(--gold);position:relative;z-index:1}
+.step b{display:block;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:20px;letter-spacing:.03em;color:var(--cream);margin-bottom:6px}
+.step p{font-size:14.5px;color:var(--muted);line-height:1.7;max-width:64ch}
 
-/* TIMELINE */
-.timeline { display: flex; flex-direction: column; margin-top: 60px; position: relative; }
-.timeline::before { content: ''; position: absolute; left: 28px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, transparent, var(--gold-dim) 10%, var(--gold-dim) 90%, transparent); }
-.timeline-item { display: flex; gap: 32px; padding: 32px 0; border-bottom: 1px solid var(--border-light); }
-.timeline-item:last-child { border-bottom: none; }
-.timeline-marker { width: 56px; height: 56px; background: var(--navy-mid); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--gold); position: relative; z-index: 1; }
-.timeline-content strong { font-family: 'Rajdhani', sans-serif; font-size: 17px; font-weight: 700; color: var(--silver-bright); display: block; margin-bottom: 6px; }
-.timeline-content p { font-size: 14px; color: var(--text-muted); line-height: 1.7; max-width: 600px; }
+/* leadership */
+.people{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.person{padding:30px 32px;border:1px solid var(--line);background:rgba(201,162,75,.03)}
+.person .role{font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:600;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.person .name{font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:30px;letter-spacing:.02em;color:var(--cream);margin:6px 0 12px;line-height:1}
+.person p{font-size:14.5px;color:var(--silver);line-height:1.7}
+.social{display:flex;gap:16px;margin-top:16px}
+.social a{font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold-dim);padding-bottom:2px}
+.social a:hover{border-color:var(--gold)}
 
-/* PRICING */
-.pricing-section { background: var(--navy-mid); border-top: 1px solid var(--border-light); }
-.pricing-card { max-width: 680px; margin: 60px auto 0; border: 1px solid var(--border); background: rgba(7,13,22,0.8); overflow: hidden; }
-.pricing-header { background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04)); border-bottom: 1px solid var(--border); padding: 36px 40px; display: flex; justify-content: space-between; align-items: center; }
-.pricing-tier { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 8px; }
-.pricing-amount { font-family: 'Bebas Neue', sans-serif; font-size: 56px; letter-spacing: 2px; color: var(--white); line-height: 1; }
-.pricing-period { font-family: 'Rajdhani', sans-serif; font-size: 14px; color: var(--text-muted); margin-top: 4px; }
-.pricing-badge { background: rgba(201,168,76,0.1); border: 1px solid var(--border); padding: 12px 20px; text-align: center; }
-.pricing-badge-text { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--gold); text-transform: uppercase; }
-.pricing-body { padding: 36px 40px; }
-.pricing-features { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
-.pricing-features li { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--silver); }
-.pricing-features li::before { content: ''; width: 6px; height: 6px; background: var(--gold); flex-shrink: 0; }
-.pricing-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 16px; line-height: 1.6; }
+/* pricing */
+.price{max-width:700px;margin:48px auto 0;border:1px solid var(--line);background:rgba(7,14,26,.8)}
+.price .head{padding:30px 36px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(201,162,75,.12),rgba(201,162,75,.03))}
+.price .head .cond{font-weight:700;font-size:40px;letter-spacing:.02em;color:var(--cream);line-height:1;margin-top:8px}
+.price .head span{display:block;margin-top:8px;font-size:15px;color:var(--silver)}
+.price .body{padding:30px 36px}
+.price ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:26px}
+.price li{display:flex;gap:10px;align-items:center;font-size:14.5px;color:var(--silver)}
+.price li::before{content:'';width:6px;height:6px;background:var(--gold);flex:0 0 6px}
+.price .note{margin-top:14px;font-size:13px;color:var(--muted);text-align:center;line-height:1.6}
 
-/* DEMO */
-.demo-section { border-top: 1px solid var(--border-light); }
-.demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 60px; }
-.demo-form { display: flex; flex-direction: column; gap: 16px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.form-group { display: flex; flex-direction: column; gap: 6px; }
-.form-label { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; }
-.form-input, .form-select, .form-textarea { background: rgba(10,22,40,0.8); border: 1px solid rgba(168,184,204,0.15); color: var(--white); font-family: 'Inter', sans-serif; font-size: 14px; padding: 12px 16px; outline: none; transition: border-color 0.2s; width: 100%; }
-.form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
-.form-select { cursor: pointer; }
-.form-select option { background: var(--navy-mid); }
-.form-textarea { resize: vertical; min-height: 100px; }
-.trust-items { display: flex; flex-direction: column; gap: 20px; margin-top: 36px; }
-.trust-item { display: flex; gap: 16px; align-items: flex-start; }
-.trust-icon { width: 40px; height: 40px; background: rgba(201,168,76,0.08); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
-.trust-text strong { font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; color: var(--silver-bright); display: block; margin-bottom: 2px; }
-.trust-text p { font-size: 13px; color: var(--text-muted); }
+/* demo */
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:8px}
+form{display:flex;flex-direction:column;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:block;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+input,select,textarea{width:100%;background:rgba(16,31,53,.8);border:1px solid rgba(201,205,211,.16);color:var(--cream);font:400 15px Barlow,Arial,sans-serif;padding:12px 14px;outline:0}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+select option{background:var(--navy)}
+textarea{min-height:100px;resize:vertical}
+.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+.status{display:none;padding:26px 28px;border:1px solid var(--line);background:rgba(201,162,75,.05);font-size:15px;line-height:1.6}
+.status.ok{display:block}.status.err{display:block;border-color:rgba(180,68,58,.6)}
+.status b{display:block;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:700;font-size:26px;letter-spacing:.06em;color:var(--gold);margin-bottom:6px}
+.expect{display:flex;flex-direction:column;gap:18px;margin-top:30px}
+.ex{display:flex;gap:14px}
+.ex i{flex:0 0 8px;width:8px;height:8px;margin-top:9px;background:var(--gold)}
+.ex b{display:block;font-family:'Barlow Condensed',Arial Narrow,Arial,sans-serif;font-weight:600;font-size:17px;letter-spacing:.03em;color:var(--cream)}
+.ex p{font-size:14px;color:var(--muted);line-height:1.55}
+.contact{margin-top:36px;padding-top:24px;border-top:1px solid var(--line-soft);font-size:14.5px;color:var(--silver);line-height:1.9}
+.contact a{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--gold-dim)}
 
-/* FORM SUCCESS */
-.form-success { display: none; text-align: center; padding: 48px 32px; border: 1px solid var(--border); background: rgba(201,168,76,0.04); }
-.form-success .success-icon { font-size: 48px; margin-bottom: 16px; }
-.form-success h3 { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 3px; color: var(--gold); margin-bottom: 12px; }
-.form-success p { font-size: 14px; color: var(--text-muted); }
+/* footer */
+footer{border-top:1px solid var(--line-soft);background:#050A12}
+.foot{max-width:1160px;margin:0 auto;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.foot .brand .cond{font-size:20px}
+.foot .right{text-align:right;font-size:12.5px;color:var(--muted);line-height:1.7}
+.foot .right .wordmark{font-size:12px;color:var(--silver);display:block;margin-bottom:4px}
 
-/* FOOTER */
-footer { border-top: 1px solid var(--border-light); background: rgba(5,10,18,0.9); }
-.footer-inner { max-width: 1200px; margin: 0 auto; padding: 48px; display: flex; justify-content: space-between; align-items: center; }
-.footer-brand { display: flex; align-items: center; gap: 12px; }
-.footer-shield { width: 36px; height: 36px; object-fit: contain; filter: drop-shadow(0 0 6px rgba(201,168,76,0.3)); }
-.footer-brand-text { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 3px; color: var(--silver); }
-.footer-brand-sub { font-family: 'Rajdhani', sans-serif; font-size: 10px; letter-spacing: 2px; color: var(--gold-dim); text-transform: uppercase; }
-.footer-right { text-align: right; }
-.footer-url { font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 1px; color: var(--gold); }
-.footer-copy { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
-.gold-divider { height: 1px; background: linear-gradient(to right, transparent, var(--gold-dim), transparent); margin: 0 48px; }
-
-/* FADE IN — visible by default, no JS dependency */
-.fade-in { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  nav { padding: 0 24px; }
-  .nav-links { display: none; }
-  .section-inner { padding: 60px 24px; }
-  .hero { padding: 68px 24px 0; }
-  .problem-grid, .features-grid, .demo-grid { grid-template-columns: 1fr; }
-  .modules-grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-stats { gap: 32px; }
-  .pricing-features { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-inner { flex-direction: column; gap: 24px; text-align: center; }
-  .footer-right { text-align: center; }
+@media(max-width:900px){
+  nav{padding:0 20px}.links{display:none}.inner{padding:64px 22px}
+  .hero{padding:96px 22px 48px}.truths{grid-template-columns:1fr 1fr;gap:18px}.truth{border-left:0;padding:0}
+  .two,.grid2,.people,.demo,.row{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}
+  .price ul{grid-template-columns:1fr}.foot{flex-direction:column;text-align:center}.foot .right{text-align:center}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">
-    <img src="shield.png" class="nav-shield" alt="Argus Shield">
-    <div class="nav-brand">
-      <span class="nav-brand-main">ARGUS</span>
-      <span class="nav-brand-sub">Paladin Intelligence</span>
-    </div>
+  <a class="brand" href="#top">
+    <img src="brand/argus-shield-120.png" alt="Argus">
+    <span><span class="cond">ARGUS</span><span class="wordmark">Paladin Intelligence</span></span>
   </a>
-  <ul class="nav-links">
+  <ul class="links">
+    <li><a href="#problem">The Problem</a></li>
     <li><a href="#platform">Platform</a></li>
-    <li><a href="#modules">Modules</a></li>
     <li><a href="#why">Why Argus</a></li>
     <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#demo" class="nav-cta">Request Demo</a></li>
+    <li><a href="#pilot">Pilot</a></li>
+    <li><a class="btn gold" href="#demo">Request a Demo</a></li>
   </ul>
 </nav>
 
-<section class="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">Justice Operations Platform</div>
-    <div class="hero-shield-wrap">
-      <img src="shield.png" alt="Argus Shield">
+<section class="hero" id="top">
+  <div class="hero-in">
+    <div class="eyebrow">Justice Operations Platform</div>
+    <img src="shield.png" alt="Argus shield">
+    <h1>Nothing Hidden.<br><span>Nothing Missed.</span></h1>
+    <div class="built">Built by jail professionals. For jail professionals.</div>
+    <p class="sub">Argus is the operating picture of a jail - who is where, who has them, and which clock is about to run out. It is kept by the people doing the work, on the devices in their hands, and attributed to them by name.</p>
+    <div class="actions">
+      <a class="btn gold" href="#demo">Request a Demo</a>
+      <a class="btn ghost" href="#platform">See the Platform</a>
     </div>
-    <h1 class="hero-title">Nothing Hidden.<br><span>Nothing Missed.</span></h1>
-    <p class="hero-tagline">Built by Law Enforcement. For Law Enforcement.</p>
-    <p class="hero-sub">Argus is the Justice Operations Platform that transforms how jails manage custody, compliance, intelligence, and command — replacing paper chaos with constitutional certainty.</p>
-    <div class="hero-actions">
-      <a href="#demo" class="btn-primary">Request a Demo</a>
-      <a href="#platform" class="btn-secondary">See the Platform</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item"><div class="stat-number">113</div><div class="stat-label">Integrated Engines</div></div>
-      <div class="stat-item"><div class="stat-number">14</div><div class="stat-label">Constitutional Rules Enforced</div></div>
-      <div class="stat-item"><div class="stat-number">0</div><div class="stat-label">Paper Forms Required</div></div>
-      <div class="stat-item"><div class="stat-number">24/7</div><div class="stat-label">Litigation Defense</div></div>
+    <div class="truths">
+      <div class="truth"><b>Every act has a name on it</b><span>An officer's own credential is the only identity Argus accepts. Nothing is recorded "by the system."</span></div>
+      <div class="truth"><b>Every clock is watched</b><span>Fifteen-minute checks, 48-hour detainers, 72-hour first appearances, restraint limits. Counted, surfaced, never silent.</span></div>
+      <div class="truth"><b>Works at 0300 on your network</b><span>The handheld authenticates on the local network. No cloud login stands between a deputy and a round.</span></div>
+      <div class="truth"><b>Driven before it ships</b><span>We run the hard days against it, the fight, the hospital run, the shift change, and fix what breaks before you see it.</span></div>
     </div>
   </div>
 </section>
 
-<section class="problem-section" id="platform">
-  <div class="section-inner">
-    <div class="section-label">The Problem</div>
-    <h2 class="section-title">Your Current System<br>Has No Memory</h2>
-    <div class="problem-grid">
-      <div class="problem-list fade-in">
-        <div class="problem-item">
-          <div class="problem-icon">📋</div>
-          <div class="problem-text"><strong>Paper Forms Disappear</strong><p>DRs get lost. Property sheets go missing. Warrant refuses vanish from the system. Your institutional memory walks out the door every shift change.</p></div>
-        </div>
-        <div class="problem-item">
-          <div class="problem-icon">⏰</div>
-          <div class="problem-text"><strong>Deadlines Are Invisible</strong><p>Constitutional hearing deadlines, ICE detainer clocks, first appearance windows — missed not from negligence, but because nothing tells you they exist.</p></div>
-        </div>
-        <div class="problem-item">
-          <div class="problem-icon">🔒</div>
-          <div class="problem-text"><strong>People Get Lost in Custody</strong><p>Minor charge inmates sit for months past any likely sentence. No one flags it. No system watches the clock. That's a lawsuit waiting to happen.</p></div>
-        </div>
-        <div class="problem-item">
-          <div class="problem-icon">📊</div>
-          <div class="problem-text"><strong>Command Is Always Reactive</strong><p>You find out about the problem after it became a crisis. No system is watching for the early signals that would let you get ahead of it.</p></div>
-        </div>
+<section class="band" id="problem">
+  <div class="inner">
+    <div class="eyebrow">The Problem</div>
+    <h2>Your current system has no memory.</h2>
+    <p class="lead">Jails run on institutional memory, and institutional memory walks out the door at every shift change.</p>
+    <div class="two">
+      <div class="stack">
+        <div class="item"><b>Paper disappears</b><p>Passdowns, property sheets, warrant refusals, restraint logs. The record of what happened lives on a clipboard until it doesn't.</p></div>
+        <div class="item"><b>Deadlines are invisible</b><p>First-appearance windows, detainer clocks, check intervals, restraint limits. They get missed, not from negligence, but because nothing in the building is counting.</p></div>
+        <div class="item"><b>Nobody knows who has whom</b><p>A person leaves the floor for court, medical, a work detail, a hospital. The question of who has them right now gets answered by radio, if at all.</p></div>
+        <div class="item"><b>Command finds out after</b><p>The relieving sergeant pieces the night together from nineteen screens and a conversation. The Sheriff hears about it from a lawyer.</p></div>
       </div>
-      <div class="problem-right fade-in">
-        <p class="problem-quote">"We built Argus because we lived these problems. Not as consultants — as the sergeant on the floor at 2am, trying to find a warrant nobody could locate."</p>
-        <p class="problem-quote-source">— Doug Anderson, Founder &amp; CEO<br>Paladin Intelligence</p>
+      <div class="quote">
+        <p>We built Argus because we lived these problems. Not as consultants. As the sergeant on the floor at 2 a.m., trying to find a warrant nobody could locate.</p>
+        <small>Doug Anderson · Founder &amp; CEO</small>
       </div>
     </div>
   </div>
 </section>
 
-<section id="leadership">
-  <div class="section-inner">
-    <div class="section-label">Leadership</div>
-    <h2 class="section-title">Built by People<br>Who've Been There.</h2>
-    <p class="section-body">Paladin Intelligence was founded by corrections professionals who lived the operational problems Argus solves — not consultants, not software people. People who ran the floor.</p>
-    <div class="problem-grid fade-in" style="margin-top:60px">
-      <div class="problem-right" style="display:flex;flex-direction:column;gap:0">
-        <div style="padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid var(--border-light)">
-          <p style="font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:12px">Founder &amp; CEO</p>
-          <p style="font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--silver-bright);margin-bottom:12px">Doug Anderson</p>
-          <p style="font-size:14px;color:var(--text-muted);line-height:1.7">Corrections leader, Watch Commander, and technology innovator. Founded Paladin Intelligence to solve the operational problems he lived every day on the floor. Every workflow in Argus was experienced firsthand before a single line of code was written.</p>
-        </div>
-        <div>
-          <p style="font-family:'Rajdhani',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:12px">Co-Founder &amp; Chief Operations Advisor</p>
-          <p style="font-family:'Rajdhani',sans-serif;font-size:22px;font-weight:700;color:var(--silver-bright);margin-bottom:12px">Jeff Ashley</p>
-          <p style="font-size:14px;color:var(--text-muted);line-height:1.7">Corrections professional and law enforcement leader with more than two decades of experience in jail administration. Ashley has served at every level of a detention organization — from Jailor to Assistant Jail Administrator — providing a comprehensive understanding of detention operations few can match. Co-founder of Paladin Intelligence and recipient of the FBI-LEEDA Leadership Trilogy Award.</p>
-        </div>
-      </div>
-      <div class="problem-right">
-        <p class="problem-quote" style="font-size:18px">"Rather than replacing existing systems, Argus is designed to integrate them — reducing human error, improving situational awareness, and enabling detention leaders to make faster, more informed operational decisions."</p>
-        <p class="problem-quote-source">— Jeff Ashley, Co-Founder<br>Paladin Intelligence</p>
-      </div>
+<section id="platform">
+  <div class="inner">
+    <div class="eyebrow">The Platform</div>
+    <h2>One system. Booking to release.</h2>
+    <p class="lead">Argus covers the whole custody lifecycle on the web and on a rugged handheld the officer carries. Every module writes to the same record, under the same rules, with the same name on every line.</p>
+    <div class="grid4">
+      <div class="card"><b>Intake &amp; Booking</b><p>One true start. Identity, charges against the Georgia code, nurse screening, property, photographs that pass the standard.</p></div>
+      <div class="card"><b>Housing &amp; Custody</b><p>Classification, keep-separates, unit states, and a custody model that always knows who holds a person and where.</p></div>
+      <div class="card"><b>Movement &amp; Scanning</b><p>Tap a wall tag, scan a wristband: rounds, headcounts, moves and escorts recorded on the handheld in the time it takes to walk.</p></div>
+      <div class="card"><b>Court &amp; First Appearance</b><p>The docket inside the constitutional deadline, bail orders with their judge, bond conditions the release desk can read.</p></div>
+      <div class="card"><b>Sentence &amp; Release</b><p>One projected release date across every sentence, every hold surfaced, and nothing releases by itself.</p></div>
+      <div class="card"><b>Medical &amp; Mental Health</b><p>Sick call, watch placements with their check clocks, and proof that a person was seen - by whom, and when.</p></div>
+      <div class="card"><b>External Transports &amp; Off-Site</b><p>Court pulls, hospital posts, admissions, reliefs and check-ins. Custody that leaves the building without leaving the record.</p></div>
+      <div class="card"><b>Command</b><p>The Tower's live picture, notifications that reach the right rank, and a shift passdown written all day and signed at handover.</p></div>
     </div>
   </div>
 </section>
 
-<section class="hidden-spacer" style="display:none">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="modules">
-  <div class="section-inner">
-    <div class="section-label">The Platform</div>
-    <h2 class="section-title">Every Engine You Need.<br>One Unified System.</h2>
-    <p class="section-body">Argus integrates 113 engines across four operational rings — from booking through release, from the floor to command staff.</p>
-    <div class="modules-grid fade-in">
-      <div class="module-card"><div style="font-size:32px;margin-bottom:14px">⚖️</div><div class="module-name">Court Engine</div><div class="module-desc">Holds, bond conditions, sentences, two-for-one credit, probation tracking</div></div>
-      <div class="module-card"><div style="font-size:32px;margin-bottom:14px">🏠</div><div class="module-name">Housing</div><div class="module-desc">Dynamic classification, keep-separate enforcement, pod-level intelligence</div></div>
-      <div class="module-card"><div style="font-size:32px;margin-bottom:14px">🚨</div><div class="module-name">Incidents</div><div class="module-desc">Constitutional DR workflow, evidence chain of custody, criminal referrals</div></div>
-      <div class="module-card"><div style="font-size:32px;margin-bottom:14px">🏥</div><div class="module-name">Medical</div><div class="module-desc">Screening workflows, medication tracking, mental health flags, sick call</div></div>
-      <div class="module-card"><div style="font-size:32px;margin-bottom:14px">🚗</div><div class="module-name">Transport</div><div class="module-desc">Court transport manifests, separation logic, TEK84 integration, GPS tracking</div></div>
-      <div class="module-card"><div style="font-size:32px;margin-bottom:14px">🔓</div><div class="module-name">Release</div><div class="module-desc">8-layer priority stack, hold validation, bond conditions, NUMI integration</div></div>
-      <div class="module-card"><div style="font-size:32px;margin-bottom:14px">💰</div><div class="module-name">Inmate Trust</div><div class="module-desc">Immutable ledger, zero floor enforcement, JailATM integration, per-diem</div></div>
-      <div class="module-card"><div style="font-size:32px;margin-bottom:14px">📡</div><div class="module-name">Intelligence</div><div class="module-desc">Anomaly detection, predictive alerts, command dashboards, pattern recognition</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="features-section" id="why">
-  <div class="section-inner">
-    <div class="section-label">Why Argus</div>
-    <h2 class="section-title">Built Different.</h2>
-    <p class="section-body">Argus doesn't just match what legacy JMS vendors offer. It replaces capabilities they never built.</p>
-    <div class="features-grid fade-in">
-      <div class="feature-item"><div class="feature-number">01</div><div class="feature-title">Built by Jail Professionals. Not Software People.</div><div class="feature-body">A Senior Sergeant who ran the floor and a member of Command Staff who ran operations and administration — between them, decades of real-world experience baked into every screen. Every workflow was lived before it was coded.</div></div>
-      <div class="feature-item"><div class="feature-number">02</div><div class="feature-title">Constitutional Enforcement Layer</div><div class="feature-body">ACEL enforces all 14 Argus Constitutional Rules automatically — across every module, every API, every event. No destructive edits. No silent failures. No timestamp corruption. Court-defensible by design.</div></div>
-      <div class="feature-item"><div class="feature-number">03</div><div class="feature-title">Time-Served Proximity Alerts</div><div class="feature-body">Argus watches every inmate's time in custody against their charge profile. Yellow to Orange to Red to Critical alerts surface people approaching or exceeding reasonable sentence ranges before it becomes a civil rights issue.</div></div>
-      <div class="feature-item"><div class="feature-number">04</div><div class="feature-title">Warrant Lifecycle Intelligence</div><div class="feature-body">Refused warrants don't disappear. They permanently attach to the MPI record. Recalled warrants are tracked. The system enforces constitutional deadline windows and alerts before they expire.</div></div>
-      <div class="feature-item"><div class="feature-number">05</div><div class="feature-title">DR Hearing Engine</div><div class="feature-body">Real-time narrative neutrality analysis as the officer types. Element-by-element charge validation. Constitutional hearing deadline enforcement. The Sergeant sees a complete intelligence brief before the hearing begins.</div></div>
-      <div class="feature-item"><div class="feature-number">06</div><div class="feature-title">Below Georgia Bid Threshold</div><div class="feature-body">At $18,000/year, Argus is priced below Georgia's $25,000 single-vendor threshold. Most agencies can pilot Argus without a formal RFP process — meaning you can be live in weeks, not years.</div></div>
+<section class="band" id="why">
+  <div class="inner">
+    <div class="eyebrow">Why Argus</div>
+    <h2>Built different, on purpose.</h2>
+    <p class="lead">Legacy jail software was written for records clerks. Argus was written for the people on the floor at three in the morning, and for the command staff who answer for them.</p>
+    <div class="grid2">
+      <div class="why"><div class="n">01</div><b>Written by the people who run the floor</b><p>A working Senior Sergeant and a 1st Lieutenant with eighteen years in jail administration. Every workflow in Argus was worked on a real shift before it was coded, and the rulings that shape it are recorded by name.</p></div>
+      <div class="why"><div class="n">02</div><b>Attribution, not "the system"</b><p>Argus refuses to record an act without the officer's own credential behind it. Reports print who wrote them, who edited them, and whether a template or an assistant helped. That is what a court will ask.</p></div>
+      <div class="why"><div class="n">03</div><b>The clocks are the product</b><p>Suicide-watch checks, restraint ceilings, detainer windows, first-appearance deadlines, off-site check-ins. Each one is counted from the moment it starts and surfaced to the rank that can act. A missed check is a permanent fact, not a warning that clears itself.</p></div>
+      <div class="why"><div class="n">04</div><b>The handheld is the officer's, not the vendor's</b><p>A rugged device with NFC. One scan and one tap for the act itself. Authenticates on your network. Keeps working when the internet doesn't. Records custody hand-offs in a hospital corridor at 0100.</p></div>
+      <div class="why"><div class="n">05</div><b>Shift change in one screen</b><p>The Commander's Passdown, composed from the record. Counts, who is out of the building, what will bite the next watch. Every line marked as read from the system or typed by a named officer. Signed by the Watch Commander, reprinted byte-for-byte.</p></div>
+      <div class="why"><div class="n">06</div><b>Driven end to end before you see it</b><p>We don't demo slides. We run real days against the software: a fight in the dayroom, a hospital run, bond day, shift change. We fix what those days break before a pilot begins, and you will see the record of that, not a promise.</p></div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="section-inner">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">From Booking to Release.<br>Every Step. Every Person.</h2>
-    <div class="timeline fade-in">
-      <div class="timeline-item"><div class="timeline-marker">01</div><div class="timeline-content"><strong>Intake &amp; Booking</strong><p>Deputy arrives with a subject. Argus pre-creates the intake packet before they walk in the door. MPI lookup, nurse screening workflow, property inventory, TEK84 scan, mugshot capture, charge entry with OCGA smart search — all connected, all logged.</p></div></div>
-      <div class="timeline-item"><div class="timeline-marker">02</div><div class="timeline-content"><strong>Classification &amp; Housing</strong><p>Argus drafts a classification recommendation based on charges, history, medical flags, keep-separate conflicts, and bond conditions. The Sergeant reviews and finalizes. Housing assignment enforces every rule automatically.</p></div></div>
-      <div class="timeline-item"><div class="timeline-marker">03</div><div class="timeline-content"><strong>Custody Intelligence</strong><p>Every event — movement, incident, court date, hold change, medical flag — flows through the event bus to every connected engine. Command staff see the full facility in real time. Nothing is siloed. Nothing is missed.</p></div></div>
-      <div class="timeline-item"><div class="timeline-marker">04</div><div class="timeline-content"><strong>Constitutional Release</strong><p>Release triggers an 8-layer priority stack: holds, warrants, bond conditions, mandatory holds, risk flags, administrative checks. Argus surfaces every blocking condition before the door opens. The decision is always human. The intelligence is always complete.</p></div></div>
+  <div class="inner">
+    <div class="eyebrow">How it works</div>
+    <h2>Every step. Every person.</h2>
+    <div class="tl">
+      <div class="step"><div class="mark">01</div><div><b>Intake &amp; Booking</b><p>The arresting officer's sheet is one true start. Identity is resolved against the master person index, charges are entered against the Georgia code, the nurse's gate is honored before housing, and the photographs meet the standard the state will accept.</p></div></div>
+      <div class="step"><div class="mark">02</div><div><b>Classification &amp; Housing</b><p>Argus drafts the classification from charges, history, flags and keep-separates. A sergeant rules on it. Housing enforces the rulings, and a move on the floor is a scan, not a form.</p></div></div>
+      <div class="step"><div class="mark">03</div><div><b>Custody, all day</b><p>Every movement, contact, check, hand-off and off-site leg flows to one record. The Tower sees the building live. The passdown writes itself as the day happens, and the relieving sergeant reads one screen instead of nineteen.</p></div></div>
+      <div class="step"><div class="mark">04</div><div><b>Release with the whole picture</b><p>Every hold, warrant, bond condition, detainer clock and sentence projection is on the release desk's screen before the door opens. The decision is always a human's. The picture is always complete.</p></div></div>
     </div>
   </div>
 </section>
 
-<section class="pricing-section" id="pricing">
-  <div class="section-inner" style="text-align:center">
-    <div class="section-label" style="justify-content:center">Pricing</div>
-    <h2 class="section-title">Straightforward. No Surprises.</h2>
-    <p class="section-body" style="margin:0 auto">One price. Full platform. Paladin-hosted. No per-seat fees, no module add-ons, no surprise implementation costs.</p>
-    <div class="pricing-card fade-in">
-      <div class="pricing-header">
-        <div>
-          <div class="pricing-tier">Pilot Program</div>
-          <div class="pricing-amount">$18,000</div>
-          <div class="pricing-period">per year · all-inclusive</div>
-        </div>
-        <div class="pricing-badge"><div class="pricing-badge-text">Below Georgia<br>$25K Threshold</div></div>
+<section class="band" id="leadership">
+  <div class="inner">
+    <div class="eyebrow">Leadership</div>
+    <h2>Built by people who've been there.</h2>
+    <p class="lead">Paladin Intelligence was founded by working corrections professionals - people who ran the floor and ran the operation, and who still do.</p>
+    <div class="people">
+      <div class="person">
+        <div class="role">Founder &amp; CEO</div>
+        <div class="name">Doug Anderson</div>
+        <p>A working Senior Sergeant and Watch Commander in a Georgia county jail. Before the badge, a career building software. Argus began as the tools he needed on his own shift. Every workflow in it was worked by him before it was written.</p>
+        <div class="social"><a href="https://www.linkedin.com/in/douganderson-pi/" target="_blank" rel="noopener">LinkedIn</a><a href="https://x.com/DougAndersonPI" target="_blank" rel="noopener">X</a></div>
       </div>
-      <div class="pricing-body">
-        <ul class="pricing-features">
-          <li>Full Argus platform access</li>
-          <li>All core engine modules</li>
-          <li>Paladin-hosted deployment</li>
-          <li>CJIS-compliant infrastructure</li>
-          <li>Unlimited staff accounts</li>
-          <li>Constitutional compliance layer</li>
-          <li>Onboarding &amp; training</li>
-          <li>Ongoing support</li>
+      <div class="person">
+        <div class="role">Co-Founder &amp; COO</div>
+        <div class="name">Jeff Ashley</div>
+        <p>A 1st Lieutenant with eighteen years in jail administration, having served at every level of a detention organization from Jailor to Assistant Jail Administrator. Recipient of the FBI-LEEDA Leadership Trilogy Award. He is the operational judgment behind every rule Argus enforces.</p>
+        <div class="social"><a href="https://www.linkedin.com/in/jeffrey-ashley-564634b0/" target="_blank" rel="noopener">LinkedIn</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pilot">
+  <div class="inner" style="text-align:center">
+    <div class="eyebrow">Pilot Program</div>
+    <h2>One platform. One price. No surprises.</h2>
+    <p class="lead" style="margin:0 auto">Argus is priced by your facility's average daily population, not by seats or modules. Pilot agreements are structured to fit under a county's small-purchase threshold, so most Georgia agencies can begin without a formal RFP.</p>
+    <div class="price">
+      <div class="head"><div class="eyebrow">Pilot agreement</div><div class="cond">Priced by population</div><span>Full platform · all modules · unlimited staff accounts</span></div>
+      <div class="body">
+        <ul>
+          <li>Every module, web and handheld</li>
+          <li>Unlimited officer and staff accounts</li>
+          <li>Hosted and operated by Paladin</li>
+          <li>Built for CJIS Security Policy from the first line</li>
+          <li>Onboarding on your floor, with your people</li>
+          <li>Support from the people who built it</li>
+          <li>Your data is yours, exportable, always</li>
+          <li>No per-seat fees, no module add-ons</li>
         </ul>
-        <a href="#demo" class="btn-primary" style="width:100%;text-align:center;display:block">Schedule Your Demo</a>
-        <p class="pricing-note">No RFP required for most Georgia agencies. Pilot agreements available. Contact us to discuss your agency's specific requirements.</p>
+        <a class="btn gold" href="#demo" style="display:block;text-align:center">Talk to us about a pilot</a>
+        <p class="note">Tell us your average daily population and we'll quote the pilot the same day.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="demo" class="demo-section">
-  <div class="section-inner">
-    <div class="demo-grid">
+<section class="band" id="demo">
+  <div class="inner">
+    <div class="demo">
       <div>
-        <div class="section-label">Request a Demo</div>
-        <div id="demoForm" class="demo-form">
-          <div class="form-row">
-            <div class="form-group"><label class="form-label" for="fname">First Name</label><input class="form-input" type="text" id="fname" placeholder="John" required></div>
-            <div class="form-group"><label class="form-label" for="lname">Last Name</label><input class="form-input" type="text" id="lname" placeholder="Smith" required></div>
+        <div class="eyebrow">Request a demo</div>
+        <h2 style="font-size:40px">See it run.</h2>
+        <form id="demoForm" novalidate>
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+          <div class="row">
+            <div><label for="fname">First name</label><input id="fname" name="first_name" required></div>
+            <div><label for="lname">Last name</label><input id="lname" name="last_name" required></div>
           </div>
-          <div class="form-group"><label class="form-label" for="title">Title / Rank</label><input class="form-input" type="text" id="title" placeholder="e.g. Captain, Administrator, Sheriff"></div>
-          <div class="form-group"><label class="form-label" for="agency">Agency / Facility</label><input class="form-input" type="text" id="agency" placeholder="e.g. County Sheriff's Office" required></div>
-          <div class="form-group"><label class="form-label" for="email">Email Address</label><input class="form-input" type="email" id="email" placeholder="j.smith@agency.gov" required></div>
-          <div class="form-group"><label class="form-label" for="phone">Phone Number</label><input class="form-input" type="tel" id="phone" placeholder="(555) 000-0000"></div>
-          <div class="form-group">
-            <label class="form-label" for="population">Facility Population</label>
-            <select class="form-select" id="population">
-              <option value="">Select range...</option>
-              <option>Under 100</option>
-              <option>100 – 300</option>
-              <option>300 – 700</option>
-              <option>700 – 1,500</option>
-              <option>1,500+</option>
-            </select>
+          <div><label for="title">Title / rank</label><input id="title" name="title" placeholder="Captain, Jail Administrator, Sheriff…"></div>
+          <div><label for="agency">Agency / facility</label><input id="agency" name="agency" required></div>
+          <div class="row">
+            <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+            <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel"></div>
           </div>
-          <div class="form-group"><label class="form-label" for="message">What's your biggest operational challenge?</label><textarea class="form-textarea" id="message" placeholder="Tell us what's broken..."></textarea></div>
-          <button type="button" class="btn-primary" onclick="submitDemo()" style="margin-top:8px">Submit Demo Request</button>
-        </div>
-        <div class="form-success" id="formSuccess">
-          <div class="success-icon">&#10003;</div>
-          <h3>Request Received</h3>
-          <p>We'll be in touch within one business day to schedule your demonstration.<br><br><span style="color:var(--gold)"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3f5b5a52507f4f565e4d584a4c115c5052">[email&#160;protected]</a></span></p>
-        </div>
+          <div><label for="adp">Average daily population</label>
+            <select id="adp" name="average_daily_population"><option value="">Select…</option><option>Under 100</option><option>100 – 300</option><option>300 – 700</option><option>700 – 1,500</option><option>1,500+</option></select></div>
+          <div><label for="msg">What's the problem you'd fix first?</label><textarea id="msg" name="message"></textarea></div>
+          <button class="btn gold" type="submit" id="sendBtn">Send the request</button>
+        </form>
+        <div class="status" id="status"></div>
       </div>
-      <div class="demo-right">
-        <div class="section-label">What to Expect</div>
-        <h2 class="section-title" style="font-size:36px">A Demo Built<br>Around Your<br>Operation</h2>
-        <div class="trust-items">
-          <div class="trust-item"><div class="trust-icon">🎯</div><div class="trust-text"><strong>Tailored to Your Facility</strong><p>We configure the demo to match your population size, workflow, and the specific problems you're dealing with.</p></div></div>
-          <div class="trust-item"><div class="trust-icon">⏱</div><div class="trust-text"><strong>45 Minutes. No Sales Pressure.</strong><p>A working demonstration of the platform — not slides. You'll see real screens, real data, real workflows.</p></div></div>
-          <div class="trust-item"><div class="trust-icon">🔒</div><div class="trust-text"><strong>CJIS-Compliant from Day One</strong><p>Azure Government infrastructure. Role-based access. Immutable audit trails. Built to survive a federal security audit.</p></div></div>
-          <div class="trust-item"><div class="trust-icon">📞</div><div class="trust-text"><strong>Talk to the Person Who Built It</strong><p>You'll speak directly with a working jail sergeant who designed every workflow based on real operational experience.</p></div></div>
+      <div>
+        <div class="eyebrow">What to expect</div>
+        <h2 style="font-size:40px">A demo built around your operation.</h2>
+        <div class="expect">
+          <div class="ex"><i></i><div><b>Real screens, real data, real days</b><p>Not slides. You'll watch a booking, a move, a hospital run and a shift change happen on the web and on the handheld.</p></div></div>
+          <div class="ex"><i></i><div><b>Forty-five minutes, no pressure</b><p>Bring your jail administrator and a floor sergeant. The sergeant will have opinions. We want them.</p></div></div>
+          <div class="ex"><i></i><div><b>You talk to the people who built it</b><p>A working sergeant and a 1st Lieutenant. Not a sales team.</p></div></div>
+          <div class="ex"><i></i><div><b>We'll show you what we broke</b><p>Every hard day we've driven against Argus is on the record. We'll show you the ledger, not the brochure.</p></div></div>
+        </div>
+        <div class="contact">
+          <a href="mailto:doug.anderson@piargus.com">doug.anderson@piargus.com</a><br>
+          <a href="tel:+16784293815">678-429-3815</a><br>
+          <a href="https://www.linkedin.com/in/douganderson-pi/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="https://x.com/DougAndersonPI" target="_blank" rel="noopener">@DougAndersonPI</a>
         </div>
       </div>
     </div>
@@ -418,47 +355,42 @@ footer { border-top: 1px solid var(--border-light); background: rgba(5,10,18,0.9
 </section>
 
 <footer>
-  <div class="gold-divider"></div>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="shield.png" class="footer-shield" alt="Argus">
-      <div>
-        <div class="footer-brand-text">ARGUS</div>
-        <div class="footer-brand-sub">Paladin Intelligence</div>
-      </div>
-    </div>
-    <div class="footer-right">
-      <div class="footer-url">piargus.com</div>
-      <div class="footer-copy">&copy; 2026 Paladin Intelligence. All rights reserved.<br>Nothing Hidden. Nothing Missed.</div>
+  <div class="foot">
+    <a class="brand" href="#top"><img src="brand/argus-shield-120.png" alt="Argus"><span><span class="cond">ARGUS</span><span class="wordmark">Paladin Intelligence</span></span></a>
+    <div class="right">
+      <span class="wordmark">Nothing Hidden. Nothing Missed.</span>
+      &copy; 2026 Paladin Intelligence · piargus.com<br>
+      ARGUS&trade; and PALADIN INTELLIGENCE&trade; are trademarks of Paladin Intelligence.
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function submitDemo() {
-  var fname = document.getElementById('fname').value.trim();
-  var lname = document.getElementById('lname').value.trim();
-  var agency = document.getElementById('agency').value.trim();
-  var email = document.getElementById('email').value.trim();
-  if (!fname || !lname || !agency || !email) {
-    alert('Please fill in all required fields.');
-    return;
-  }
-  var subject = encodeURIComponent('Argus Demo Request — ' + agency);
-  var body = encodeURIComponent(
-    'Demo Request\n\n' +
-    'Name: ' + fname + ' ' + lname + '\n' +
-    'Title: ' + document.getElementById('title').value + '\n' +
-    'Agency: ' + agency + '\n' +
-    'Email: ' + email + '\n' +
-    'Phone: ' + document.getElementById('phone').value + '\n' +
-    'Population: ' + document.getElementById('population').value + '\n\n' +
-    'Challenge:\n' + document.getElementById('message').value
-  );
-  window.location.href = 'mailto:demo@piargus.com?subject=' + subject + '&body=' + body;
-  document.getElementById('demoForm').style.display = 'none';
-  document.getElementById('formSuccess').style.display = 'block';
-}
-
-document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-  anchor.addEventListener('cli
+<script>
+(function(){
+  var ACCESS_KEY = "eb54821b-4c42-4941-a1fe-781ce3888342";
+  var form = document.getElementById('demoForm'), status = document.getElementById('status'), btn = document.getElementById('sendBtn');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var required = ['fname','lname','agency','email'], missing = required.filter(function(id){ return !document.getElementById(id).value.trim(); });
+    if (missing.length){ show('err','Four fields are required.','First name, last name, agency and email.'); document.getElementById(missing[0]).focus(); return; }
+    var data = new FormData(form);
+    data.append('access_key', ACCESS_KEY);
+    data.append('subject', 'Argus demo request - ' + document.getElementById('agency').value.trim());
+    data.append('from_name', 'piargus.com');
+    btn.disabled = true; btn.textContent = 'Sending…';
+    fetch('https://api.web3forms.com/submit', { method:'POST', body:data, headers:{ 'Accept':'application/json' } })
+      .then(function(r){ return r.json().then(function(j){ return { ok:r.ok && j.success, j:j }; }); })
+      .then(function(res){
+        if (res.ok){ form.style.display='none'; show('ok','Request received.','We will reply within one business day to set a time. If you need us sooner: doug.anderson@piargus.com · 678-429-3815.'); }
+        else { throw new Error(res.j && res.j.message ? res.j.message : 'send failed'); }
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = 'Send the request';
+        show('err','The request did not go through.','Nothing was sent. Email us directly at doug.anderson@piargus.com or call 678-429-3815 and we will set it up by hand.');
+      });
+  });
+  function show(kind, head, body){ status.className = 'status ' + kind; status.innerHTML = '<b>' + head + '</b>' + body; }
+})();
+</script>
+</body>
+</html>
